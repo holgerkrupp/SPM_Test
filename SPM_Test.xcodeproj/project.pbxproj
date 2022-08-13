@@ -13,6 +13,7 @@
 		486C1A2128A7CE46002E4D5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486C1A1F28A7CE46002E4D5B /* Main.storyboard */; };
 		486C1A2328A7CE49002E4D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486C1A2228A7CE49002E4D5B /* Assets.xcassets */; };
 		486C1A2628A7CE49002E4D5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486C1A2428A7CE49002E4D5B /* LaunchScreen.storyboard */; };
+		486C1A3028A7CE8A002E4D5B /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 486C1A2F28A7CE8A002E4D5B /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		486C1A2228A7CE49002E4D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		486C1A2528A7CE49002E4D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		486C1A2728A7CE49002E4D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		486C1A2D28A7CE51002E4D5B /* SPM_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SPM_Test.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486C1A3028A7CE8A002E4D5B /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 		486C1A1828A7CE46002E4D5B /* SPM_Test */ = {
 			isa = PBXGroup;
 			children = (
+				486C1A2D28A7CE51002E4D5B /* SPM_Test.entitlements */,
 				486C1A1928A7CE46002E4D5B /* AppDelegate.swift */,
 				486C1A1B28A7CE46002E4D5B /* SceneDelegate.swift */,
 				486C1A1D28A7CE46002E4D5B /* ViewController.swift */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = SPM_Test;
+			packageProductDependencies = (
+				486C1A2F28A7CE8A002E4D5B /* GoogleMobileAds */,
+			);
 			productName = SPM_Test;
 			productReference = 486C1A1628A7CE46002E4D5B /* SPM_Test.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 486C1A0D28A7CE46002E4D5B;
+			packageReferences = (
+				486C1A2E28A7CE8A002E4D5B /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 486C1A1728A7CE46002E4D5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SPM_Test/SPM_Test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46D3VYP253;
@@ -302,6 +313,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.holgerkrupp.SPM-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SPM_Test/SPM_Test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46D3VYP253;
@@ -330,6 +343,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.holgerkrupp.SPM-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		486C1A2E28A7CE8A002E4D5B /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		486C1A2F28A7CE8A002E4D5B /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 486C1A2E28A7CE8A002E4D5B /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 486C1A0E28A7CE46002E4D5B /* Project object */;
 }
